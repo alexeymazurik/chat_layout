@@ -6,12 +6,17 @@ Setup
 
 To deploy this project on your local machine you need installed NodeJS and npm.
 
+Also you need installed Grunt npm module globally: 
+```
+npm install -g grunt-cli
+```
+
 To start your project you should input:
 
 ```
-npm install //to install all dependencies
+npm install 
 
-grunt //to convert .scss files to .css, minify it and start local server
+grunt 
 ```
 
 You can run your project on the next url:
