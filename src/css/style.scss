@@ -1,0 +1,285 @@
+//@import url(http://fonts.googleapis.com/css?family=Istok+Web:400,700);
+
+$headerBack: #628fbf;
+$headerMainText: #edf3fa;
+$headerLink: #ccdbeb;
+
+$leftAsideBack: #b2c3df;
+$leftAsideText: #7d8d9f;
+
+$rightAsideBack: #efecf2;
+$linkColor: #84b7ff;
+
+$mainBack: #f7fafc;
+
+$mainMessageOut: #7ae583;
+$mainMessageOutTitle: #6abf63;
+$mainMessageIn: #59c0f7;
+$mainMessageInTitle: #638fbf;
+$mainTime: #a3bad4;
+
+
+$online: #a3d671;
+$onlineBorder: #7daf48;
+$offline: #ed6666;
+$offlineBorder: #af3637;
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-sizing() {
+
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:        border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  min-width: 880px;
+}
+
+.content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+
+  background: $headerBack;
+  display: block;
+  margin: 0;
+  padding: 20px;
+  color: $headerMainText;
+
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin: 0 0 0 20%;
+    font-weight: 200;
+  }
+
+
+  .logout {
+    display: inline-block;
+    text-align: right;
+    color: $headerLink;
+    font-weight: 200;
+    font-size: 1.2em;
+    float: right;
+    width: 20%;
+  }
+
+}
+
+
+.left-aside {
+  background: $leftAsideBack;
+  display: inline-block;
+  float: left;
+  width: 20%;
+  color: $leftAsideText;
+  height: 1000px;
+  font-size: 1.2em;
+
+  ul {
+    list-style: none;
+    margin: 20px 15px;
+    padding: 0;
+
+    li {
+      margin: 10px 0;
+
+      .offline, .online {
+        margin-right: 10px;
+      }
+
+    }
+  }
+
+
+}
+
+
+
+
+
+
+.right-aside {
+  background: $rightAsideBack;
+  display: inline-block;
+  float: left;
+  width: 20%;
+  height: 1000px;
+
+  ul {
+    margin: 20px 0 20px 10px;
+    padding: 0;
+    list-style: none;
+
+    a {
+      color: $linkColor;
+      font-size: 1.2em;
+    }
+
+  }
+
+  .link {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(239,236,242,1) 95%);
+    }
+  }
+
+}
+
+.main-window {
+  display: inline-block;
+  width: 60%;
+  float: left;
+  background: $mainBack;
+  height: 1000px;
+
+}
+
+
+// message-box - field for messages
+
+.message-box {
+
+  width: 100%;
+  font-size: 1.2em;
+  display: inline-block;
+  @include box-sizing();
+  position: relative;
+
+
+  .title {
+    display: block;
+    margin: 10px 3%;
+  }
+
+  .time {
+    position: absolute;
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    @include box-sizing();
+    color: $mainTime;
+    top: 55%;
+  }
+
+  .message {
+    @include border-radius(5px);
+    color: #fff;
+    width: 88.5%;
+    padding: 2%;
+    display: inline-block;
+    @include box-sizing();
+    position: relative;
+    font-weight: 100;
+  }
+
+  .message:before {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    content: ' ';
+    top: -10px;
+    position: absolute;
+  }
+
+}
+
+
+.message-out {
+
+  @extend .message-box;
+
+  .title {
+    text-align: right;
+    color: $mainMessageOutTitle;
+  }
+
+  .message {
+    float: right;
+    background: $mainMessageOut;
+    margin-right: 1.5%;
+
+  }
+
+  .message:before {
+    left: 94%;
+    border-bottom: 10px solid $mainMessageOut;
+  }
+
+}
+
+
+.message-in {
+  @extend .message-box;
+
+  .title {
+    color: $mainMessageInTitle;
+  }
+  .time {
+    text-align: center;
+    left: 90%;
+  }
+
+  .message {
+    float: left;
+    margin-left: 1.5%;
+    background: $mainMessageIn;
+  }
+
+  .message:before {
+    border-bottom: 10px solid $mainMessageIn;
+  }
+
+
+}
+
+
+
+
+.online {
+  border: 1px solid $onlineBorder;
+  @include border-radius(50%);
+  background: $online;
+  width: 10px;
+  display: inline-block;
+  height: 10px;
+}
+
+.offline {
+  border: 1px solid $offlineBorder;
+  border-radius: 50%;
+  background: $offline;
+  width: 10px;
+  display: inline-block;
+  height: 10px;
+}
+
+
+
+
