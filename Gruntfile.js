@@ -26,13 +26,22 @@ module.exports = function(grunt) {
         },
 
         clean: {
-            css: ["dist/css/*.css", "!dist/css/*.min.css"]
+            css: ["dist/css/*.css", "dist/css/*.map", "!dist/css/*.min.css"]
         },
 
         watch: {
             stylesheets: {
                 files: ['src/**/*.css', 'src/**/*.scss'],
                 tasks: ['sass', 'cssmin', 'clean']
+            }
+        },
+
+        connect: {
+            server: {
+                options: {
+                    port: 9001,
+                    base: './dist'
+                }
             }
         }
 
@@ -43,7 +52,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['sass', 'cssmin', 'clean']);
+    grunt.registerTask('default', ['sass', 'cssmin', 'clean', 'connect::keepalive']);
 
 
 };
