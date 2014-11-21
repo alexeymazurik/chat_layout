@@ -1,10 +1,11 @@
 .content {
   width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', Open Sans, sans-serif;
-  font-weight: 400;
   min-width: 880px;
   display: block;
-  height: 100%;
+  font-family: $font-family;
+  font-weight: $normal;
+  font-size: $content;
 }
