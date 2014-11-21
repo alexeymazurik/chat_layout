@@ -26,7 +26,7 @@ $leftAsideWidth: 20%;
 $rightAsideWidth: 20%;
 $width: 100% - $leftAsideWidth - $rightAsideWidth;
 
-$headerHeight: 7%;
-$contactsHeight: 100% - $headerHeight;
-$mainWindowHeight: 100% - $headerHeight;
-$linksHeight: 100% - $headerHeight;
+$headerHeight: 60px;
+$contactsHeight: calc(100% - 60px);
+$mainWindowHeight: calc(100% - 60px);
+$linksHeight: calc(100% - 60px);

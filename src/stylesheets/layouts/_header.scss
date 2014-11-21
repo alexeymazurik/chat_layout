@@ -3,7 +3,9 @@
   background: $headerBack;
   display: block;
   height: $headerHeight;
-  padding: 0.15*$headerHeight;
+  line-height: $headerHeight;
+  padding: 0 20px;
+  vertical-align: middle;
   color: $headerMainText;
   @include box-sizing();
 
