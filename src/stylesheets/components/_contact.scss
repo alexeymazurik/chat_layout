@@ -1,18 +1,24 @@
-.online {
-  border: 1px solid $onlineBorder;
+
+
+.status {
+  margin-right: 10px;
   @include border-radius(50%);
-  background: $online;
   width: 10px;
   display: inline-block;
   height: 10px;
 }
 
-.offline {
-  border: 1px solid $offlineBorder;
-  border-radius: 50%;
-  background: $offline;
-  width: 10px;
-  display: inline-block;
-  height: 10px;
+.online {
+  @extend .status;
+  @include border(1px, $onlineBorder);
+  background: $online;
 }
+
+.offline {
+  @extend .status;
+  @include border(1px, $offlineBorder);
+  background: $offline;
+}
+
+
 

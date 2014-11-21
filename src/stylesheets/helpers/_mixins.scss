@@ -11,3 +11,7 @@
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
 }
+
+@mixin border($width, $color) {
+  border: $width solid $color;
+}
