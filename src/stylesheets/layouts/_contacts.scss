@@ -5,6 +5,7 @@
   float: left;
   width: $leftAsideWidth;
   height: $contactsHeight;
-  font-size: 1.2em;
-
+  font-size: $content;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }

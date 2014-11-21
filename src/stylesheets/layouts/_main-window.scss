@@ -4,6 +4,7 @@
   float: left;
   background: $mainBack;
   height: $mainWindowHeight;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
