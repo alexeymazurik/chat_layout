@@ -1,0 +1,18 @@
+.online {
+  border: 1px solid $onlineBorder;
+  @include border-radius(50%);
+  background: $online;
+  width: 10px;
+  display: inline-block;
+  height: 10px;
+}
+
+.offline {
+  border: 1px solid $offlineBorder;
+  border-radius: 50%;
+  background: $offline;
+  width: 10px;
+  display: inline-block;
+  height: 10px;
+}
+

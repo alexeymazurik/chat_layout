@@ -1,0 +1,24 @@
+.left-aside {
+  background: $leftAsideBack;
+  display: inline-block;
+  float: left;
+  width: $leftAsideWidth;
+  color: $leftAsideText;
+  height: 100%;
+  font-size: 1.2em;
+
+  ul {
+    list-style: none;
+    margin: 20px 15px;
+    padding: 0;
+
+    li {
+      margin: 10px 0;
+
+      .offline, .online {
+        margin-right: 10px;
+      }
+
+    }
+  }
+}

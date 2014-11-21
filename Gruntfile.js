@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         sass: {
             build: {
                 files: {
-                    "dist/css/style.css": "src/css/style.scss"
+                    "dist/stylesheets/style.css": "src/stylesheets/main.scss"
                 }
             }
         },
@@ -20,13 +20,13 @@ module.exports = function(grunt) {
             },
             build: {
                 files: {
-                    'dist/css/style.min.css': 'dist/css/style.css'
+                    'dist/stylesheets/style.min.css': 'dist/stylesheets/style.css'
                 }
             }
         },
 
         clean: {
-            css: ["dist/css/*.css", "dist/css/*.map", "!dist/css/*.min.css"]
+            css: ["dist/stylesheets/*.css", "dist/stylesheets/*.map", "!dist/stylesheets/*.min.css"]
         },
 
         watch: {
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 
     });
 
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');

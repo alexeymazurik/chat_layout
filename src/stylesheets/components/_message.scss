@@ -1,0 +1,95 @@
+.message-box {
+
+  width: 100%;
+  font-size: 1.2em;
+  display: inline-block;
+  @include box-sizing();
+  position: relative;
+
+
+  .title {
+    display: block;
+    margin: 10px 3%;
+  }
+
+  .time {
+    position: absolute;
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    @include box-sizing();
+    color: $mainTime;
+    top: 55%;
+  }
+
+  .message {
+    @include border-radius(5px);
+    color: #fff;
+    width: 88.5%;
+    padding: 2%;
+    display: inline-block;
+    @include box-sizing();
+    position: relative;
+    font-weight: 100;
+  }
+
+  .message:before {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    content: ' ';
+    top: -10px;
+    position: absolute;
+  }
+
+}
+
+
+.message-out {
+
+  @extend .message-box;
+
+  .title {
+    text-align: right;
+    color: $mainMessageOutTitle;
+  }
+
+  .message {
+    float: right;
+    background: $mainMessageOut;
+    margin-right: 1.5%;
+
+  }
+
+  .message:before {
+    left: 94%;
+    border-bottom: 10px solid $mainMessageOut;
+  }
+
+}
+
+
+.message-in {
+  @extend .message-box;
+
+  .title {
+    color: $mainMessageInTitle;
+  }
+  .time {
+    text-align: center;
+    left: 90%;
+  }
+
+  .message {
+    float: left;
+    margin-left: 1.5%;
+    background: $mainMessageIn;
+  }
+
+  .message:before {
+    border-bottom: 10px solid $mainMessageIn;
+  }
+
+
+}
