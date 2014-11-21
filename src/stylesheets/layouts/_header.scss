@@ -2,8 +2,9 @@
 
   background: $headerBack;
   display: block;
-  margin: 0;
-  padding: 20px;
+  height: $headerHeight;
+  padding: 0.15*$headerHeight;
   color: $headerMainText;
+  @include box-sizing();
 
 }

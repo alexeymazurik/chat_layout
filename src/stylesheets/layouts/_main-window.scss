@@ -3,6 +3,7 @@
   width: $width;
   float: left;
   background: $mainBack;
-  height: 100%;
+  height: $mainWindowHeight;
+  overflow: scroll;
 }
 
