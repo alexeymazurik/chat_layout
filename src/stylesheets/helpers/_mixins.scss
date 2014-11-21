@@ -16,8 +16,8 @@
   border: $width solid $color;
 }
 
-@mixin box-shadow($h-shadow, $v-shadow, $blur, $spread, $color, $type) {
-  -webkit-box-shadow: $type $h-shadow $v-shadow $blur $spread $color;
-  -moz-box-shadow: $type $h-shadow $v-shadow $blur $spread $color;
-  box-shadow: $type $h-shadow $v-shadow $blur $spread $color;
+@mixin box-shadow($h-shadow, $v-shadow, $blur, $spread, $color) {
+  -webkit-box-shadow: inset $h-shadow $v-shadow $blur $spread $color;
+  -moz-box-shadow: inset $h-shadow $v-shadow $blur $spread $color;
+  box-shadow:inset $h-shadow $v-shadow $blur $spread $color;
 }
