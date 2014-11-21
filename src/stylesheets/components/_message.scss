@@ -1,7 +1,7 @@
 .message-box {
 
   width: 100%;
-  font-size: 1.2em;
+  font-size: $content;
   display: inline-block;
   @include box-sizing();
   position: relative;
@@ -28,7 +28,7 @@
     @include border-radius(5px);
     color: #fff;
     width: 88.5%;
-    padding: 2%;
+    padding: 12px;
     display: inline-block;
     @include box-sizing();
     position: relative;
@@ -65,7 +65,8 @@
   }
 
   .message:before {
-    left: 94%;
+    left: 100%;
+    margin-left: -35px;
     border-bottom: 10px solid $mainMessageOut;
   }
 
@@ -92,6 +93,7 @@
   .message:before {
     border-bottom: 10px solid $mainMessageIn;
   }
+
 
 
 }

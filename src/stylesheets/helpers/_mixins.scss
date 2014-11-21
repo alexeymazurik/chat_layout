@@ -15,3 +15,9 @@
 @mixin border($width, $color) {
   border: $width solid $color;
 }
+
+@mixin box-shadow($h-shadow, $v-shadow, $blur, $spread, $color, $type) {
+  -webkit-box-shadow: $type $h-shadow $v-shadow $blur $spread $color;
+  -moz-box-shadow: $type $h-shadow $v-shadow $blur $spread $color;
+  box-shadow: $type $h-shadow $v-shadow $blur $spread $color;
+}

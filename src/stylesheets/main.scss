@@ -2,6 +2,7 @@
 
 @import "base/reset";
 @import "base/typography";
+@import "base/retina";
 
 // Helpers
 @import "helpers/mixins";
@@ -17,8 +18,8 @@
 
 // Components
 
-@import "components/contact";
-@import "components/link";
+@import "components/contact-list";
+@import "components/link-list";
 @import "components/message";
 @import "components/headers";
 @import "components/logout";
